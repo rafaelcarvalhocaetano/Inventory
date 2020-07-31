@@ -1,13 +1,7 @@
-
 import 'package:flutter/material.dart';
-import 'package:inventory/app/database/database.dart';
 import 'package:inventory/app/pages/inventory_page.dart';
 
 class App extends StatelessWidget {
-
-  final AppDatabase database;
-
-  App({this.database});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +9,21 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
         accentColor: Color(0XFFFD5d5F),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Color(0XFFFD5D5F)
+        ),
         textTheme: TextTheme(
-          body1: TextStyle(
+          headline1: TextStyle(
             color: Colors.grey,
           ),
         ),
       ),
       title: 'Inventory',
       debugShowCheckedModeBanner: false,
-      home: InventoryPage(database: database),
+      home: InventoryPage(),
     );
   }
+
+   
+
 }

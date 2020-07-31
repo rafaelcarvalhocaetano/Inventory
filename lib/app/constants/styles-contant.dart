@@ -4,32 +4,42 @@ import 'package:flutter/services.dart';
 
 
 const kHeaderText = TextStyle(
-  color: Color(0XFF4D4D4D),
-  fontWeight: FontWeight.bold,
-  fontSize: 32.0
+  color: Colors.white,
+  fontWeight: FontWeight.w400,
+  fontSize: 22.0
 );
 
-
-
-kInput (TextEditingController title, String hint, bool is_number) => TextField(
+kInput (TextEditingController title, String hint, bool isNumber) => TextField(
   controller: title,
-  keyboardType: is_number == true ? TextInputType.number : TextInputType.text,
+  keyboardType: isNumber == true ? TextInputType.number : TextInputType.text,
+  style: TextStyle(
+    color: Colors.white,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w500
+  ),
   decoration: InputDecoration(
     hintText: hint,
+    hintStyle: TextStyle(
+      color: Colors.white54
+    ),
     focusedBorder: UnderlineInputBorder(
       borderSide: BorderSide(
-        color: Color(0XFFFD5d5F),
+        color: Colors.white70,
         width: 2.0,
       ),
     ),
     enabledBorder: UnderlineInputBorder(
       borderSide: BorderSide(
-        color: Colors.grey,
+        color: Colors.white70,
         width: 2.0,
       ),
     ),
   ),
 );
+
+const kCancel = TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 14.0,);
+const kIconCancel = Icon(Icons.close, color: Colors.red,);
+const kSave = TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 14.0);
 
 const kTextSubCard = TextStyle(
   color: Color(0XFF727272),
@@ -65,3 +75,11 @@ const kTitleDialog = TextStyle(
   color: Color(0XFF727272),
 );
 
+kBorderText(Color color) => BoxDecoration(
+  color: color,
+  borderRadius: BorderRadius.only(
+    topLeft: Radius.circular(50.0),
+    topRight: Radius.circular(50.0),
+  ),
+);
+kCode(Color color) => TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: color,);

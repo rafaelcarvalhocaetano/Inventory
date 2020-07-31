@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:inventory/app/constants/styles-contant.dart';
+// import 'package:inventory/app/constants/styles-contant.dart';
 
 class CardHorizontal extends StatefulWidget {
 
@@ -26,9 +26,9 @@ class _CardHorizontalState extends State<CardHorizontal> {
     return widget.kPath != null ? widget.kPath : urlImageDefault;
   }
 
-  String textData(String data, String option) {
-    return data != null ? data : option; 
-  }
+  // String textData(String data, String option) {
+  //   return data != null ? data : option; 
+  // }
 
   @override
   void initState() {
@@ -66,16 +66,16 @@ class _CardHorizontalState extends State<CardHorizontal> {
                         ),
                       ),
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Text(textData(widget.kTitle, 'Sem Título'), style: kTextSubCard,),
-                        Text(textData(widget.kDescription, 'Sem Descrição'), style: kTextBottom,)
-                      ],
-                    ),
+                    // Column(
+                    //   mainAxisAlignment: MainAxisAlignment.start,
+                    //   children: <Widget>[
+                    //     Text(textData(widget.kTitle, 'Sem Título'), style: kTextSubCard,),
+                    //     Text(textData(widget.kDescription, 'Sem Descrição'), style: kTextBottom,)
+                    //   ],
+                    // ),
                   ],
                 ),
-                Text(textData(widget.kValue, 'Sem Valor'), style: kTextBottom,),
+                // Text(textData(widget.kValue, 'Sem Valor'), style: kTextBottom,),
                 Icon(
                   Icons.arrow_forward_ios,
                   size: 24,
