@@ -2,14 +2,11 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:inventory/app/constants/styles-contant.dart';
+import 'package:inventory/app/constants/styles_contant.dart';
 import 'package:inventory/app/dao/inventory_dao.dart';
 import 'package:inventory/app/model/inventory.dart';
 
 class InventorySavePage extends StatefulWidget {
-
-  
-
   @override
   _InventorySavePageState createState() => _InventorySavePageState();
 }
@@ -54,7 +51,7 @@ class _InventorySavePageState extends State<InventorySavePage> {
                         children: [
                           Text(
                             resultCode != null ? resultCode : 'Sem Código',
-                            style: kCode(Colors.red[400],),
+                            style: kCode(ThemeData.light().primaryColor,),
                           ),
                         ],
                       ),
@@ -66,7 +63,7 @@ class _InventorySavePageState extends State<InventorySavePage> {
                 flex: 2,
                 child: Container(
                   padding: EdgeInsets.all(20.0),
-                  decoration: kBorderText(Colors.red[400]),
+                  decoration: kBorderText(Colors.deepPurple),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -125,7 +122,6 @@ class _InventorySavePageState extends State<InventorySavePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () => scanner(),
           tooltip: 'Increment',
-          backgroundColor: Colors.white,
           child: Icon(
             Icons.filter_center_focus,
             color: Colors.red,

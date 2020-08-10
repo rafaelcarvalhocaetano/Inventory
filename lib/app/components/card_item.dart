@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:inventory/app/constants/styles-contant.dart';
+import 'package:inventory/app/constants/styles_contant.dart';
 
 
 class CardItem extends StatelessWidget {
@@ -54,6 +54,9 @@ class CardItem extends StatelessWidget {
                       ),
                     Text(
                       kQrCode != null ? kQrCode : 'Sem Código',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: false,
                       style: kTextBottom
                     ),
                     Text(

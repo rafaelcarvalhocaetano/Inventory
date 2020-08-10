@@ -56,7 +56,7 @@ const kTextBottom = TextStyle(
 const kBorder = BoxDecoration(
   border: Border(
     left: BorderSide(
-      color: Color(0XFFFD5d5F),
+      color: Colors.purple,
       width: 5,
     ),
   ),
@@ -67,7 +67,7 @@ const kButtomSaveDialog =  TextStyle(
 );
 
 const kButtomCancelDialog =  TextStyle(
-  color: Color(0XFFFD5d5F),
+  color: Colors.purple,
   fontWeight: FontWeight.bold
 );
 

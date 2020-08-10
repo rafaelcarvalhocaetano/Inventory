@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 
 class Utility {
-
   
   static Image imageFromBase64String(String base64String) {
     return Image.memory(

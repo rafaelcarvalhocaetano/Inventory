@@ -4,28 +4,25 @@ import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:inventory/app/components/card.dart';
+import 'package:inventory/app/components/card_item.dart';
 import 'package:inventory/app/components/details_item.dart';
-import 'package:inventory/app/constants/styles-contant.dart';
+import 'package:inventory/app/constants/styles_contant.dart';
 import 'package:inventory/app/dao/inventory_dao.dart';
 import 'package:inventory/app/model/inventory.dart';
-import 'package:inventory/app/pages/inventory_save_page.dart';
+import 'package:inventory/app/pages/product/produtc_item_save_page.dart';
 
-// ignore: must_be_immutable
-class InventoryPage extends StatefulWidget {
-
-
+class ProductsPage extends StatefulWidget {
   @override
   _InventoryPageState createState() => _InventoryPageState();
 }
 
-class _InventoryPageState extends State<InventoryPage> {
+class _InventoryPageState extends State<ProductsPage> {
 
   String resultCode;
   InventoryDAO dao = InventoryDAO();
   Future<List<Inventory>> _list;
 
-  String titleHeader = 'List Inventary';
+  String titleHeader = 'Items';
 
   @override
   void initState() {
@@ -67,14 +64,13 @@ class _InventoryPageState extends State<InventoryPage> {
                       SliverAppBar(
                         centerTitle: true,
                         expandedHeight: 180.0,
+                        iconTheme: IconThemeData(color: Colors.white,),
                         pinned: true,
                         floating: true,
                         elevation: 24.0,
-                        backgroundColor: Colors.red[400],
                         actions: [
                           IconButton(
                             icon: Icon(Icons.add),
-                            color: Colors.white,
                             onPressed: () {
                               Navigator.push(
                                 context,
